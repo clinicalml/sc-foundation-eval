@@ -7,8 +7,10 @@ The repo is organized by scripts and analysis code used to analyze each model.
 * [performer_pytorch/](scBERT/performer_pytorch) contains the code for the scBERT model
 * preprocess.py is a script provided by the scBERT authors, used to preprocess a dataset for fine-tuning
 * dist_pretrain.py: used to pre-train scBERT from scratch
-* dist_finetune.py: used to run fine-tuning (cell type annotation) for scBERT (Table 1)
+* dist_finetune.py: used to run fine-tuning (cell type annotation) for scBERT (Table 1). For our "no gene2vec" ablation (Table 2), do not pass the argument `--pos_embed_g2v` when calling this script.
+  * An example command line call to run fine-tuning: `python dist_finetune.py --model_name finetune_seed2021 --data_path <path to preprocessed h5ad for fine-tuning> --model_path <path to pre-trained model> --world_size=1 --seed=2021 --epochs=10 --grad_acc=1 --batch_size=32 --pos_embed_g2v`
 * dist_finetune_nopretraining.py: run our "no pre-training" ablation on scBERT (Table 2)
+  * Similar command line call as above, but you do not need to supply a model_path, since this script does not load a pre-trained model (if you do supply one, it will be ignored and the ablation will still run properly)
 * scbert_baselines_LR.ipynb shows example code for running the logistic regression baseline for annotating cell types in the Zheng68K PBMC dataset, including the few-shot setting
 
 ## scGPT
