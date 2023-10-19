@@ -1,7 +1,7 @@
 # sc-foundation-eval
 Code for evaluating single cell foundation models scBERT and scGPT. This code was used for the analysis presented in A Deep Dive into Single-Cell RNA Sequencing Foundation Models, bioRxiv.
 
-The repo is organized by scripts and analysis code used to analyze each model.
+The repo is organized by model. Below are descriptions of the scripts and analysis code included for each:
 
 ## scBERT
 * [performer_pytorch/](scBERT/performer_pytorch) contains the code for the scBERT model
