@@ -14,6 +14,7 @@ The repo is organized by scripts and analysis code used to analyze each model.
 * dist_finetune_fewshot.py: run scBERT fine-tuning on 10, 25, 50, 75, and 100\% of the training data
 * scbert_baselines_LR.ipynb shows example code for running the logistic regression baseline for annotating cell types in the Zheng68K PBMC dataset, including the few-shot setting
 * nog2v_explore.ipynb: an exploration of pre-training performance for our "no gene2vec" ablation, including the results shown in Table 3
+* collate_final_results_finetune.ipynb: collate results of fine-tuning scBERT (full and few-shot settings), logistic regression (full and few-shot settings), and ablation studies to create Tables 1 & 2 and Figure 2
   
 ## scGPT
 * scGPT_baselines_LR.py: runs the logistic regression baseline for annotating cell types in the myeloid, multiple sclerosis, and pancreas datasets, including the few-shot settings
