@@ -12,7 +12,8 @@ The repo is organized by scripts and analysis code used to analyze each model.
 * dist_finetune_nopretraining.py: run our "no pre-training" ablation on scBERT (Table 2)
   * Similar command line call as above, but you do not need to supply a model_path, since this script does not load a pre-trained model (if you do supply one, it will be ignored and the ablation will still run properly)
 * scbert_baselines_LR.ipynb shows example code for running the logistic regression baseline for annotating cell types in the Zheng68K PBMC dataset, including the few-shot setting
-
+* nog2v_explore.ipynb: an exploration of pre-training performance for our "no gene2vec" ablation, including the results shown in Table 3
+  
 ## scGPT
 * scGPT_baselines_LR.py: runs the logistic regression baseline for annotating cell types in the myeloid, multiple sclerosis, and pancreas datasets, including the few-shot settings
 * scGPT_run_all_celltypeannot_fewshot.py: runs scGPT fine-tuning for annotating cell types in the myeloid, multiple sclerosis, and pancreas datasets, including the few-shot settings. Based on the [annotation tutorial](tutorials/Tutorial_Annotation.ipynb) provided in scGPT's GitHub repo.
