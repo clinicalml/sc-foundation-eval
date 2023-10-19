@@ -11,6 +11,7 @@ The repo is organized by scripts and analysis code used to analyze each model.
   * An example command line call to run fine-tuning: `python dist_finetune.py --model_name finetune_seed2021 --data_path <path to preprocessed h5ad for fine-tuning> --model_path <path to pre-trained model> --world_size=1 --seed=2021 --epochs=10 --grad_acc=1 --batch_size=32 --pos_embed_g2v`
 * dist_finetune_nopretraining.py: run our "no pre-training" ablation on scBERT (Table 2)
   * Similar command line call as above, but you do not need to supply a model_path, since this script does not load a pre-trained model (if you do supply one, it will be ignored and the ablation will still run properly)
+* dist_finetune_fewshot.py: run scBERT fine-tuning on 10, 25, 50, 75, and 100\% of the training data
 * scbert_baselines_LR.ipynb shows example code for running the logistic regression baseline for annotating cell types in the Zheng68K PBMC dataset, including the few-shot setting
 * nog2v_explore.ipynb: an exploration of pre-training performance for our "no gene2vec" ablation, including the results shown in Table 3
   
