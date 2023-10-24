@@ -21,3 +21,18 @@ The repo is organized by model. Below are descriptions of the scripts and analys
 * scGPT_run_all_celltypeannot_fewshot.py: runs scGPT fine-tuning for annotating cell types in the myeloid, multiple sclerosis, and pancreas datasets, including the few-shot settings. Based on the [annotation tutorial](tutorials/Tutorial_Annotation.ipynb) provided in scGPT's GitHub repo.
 * scGPT_run_all_celltypeannot_nopretrain{_freeze}.py: run our "no pre-training" ablation on scGPT, with or without freezing pre-decoder weights (Supp. Figure 6, Supp. Table 5)
 * create_figures_and_tables.ipynb: take the output of the previous scripts to create Figure 3, Supp. Figure 6, and Supp. Table 5
+
+## Data Availability
+
+### scBERT datasets
+* The Zheng68K PBMC data used for finetuning scBERT can be downloaded from our [data/](data) directory. It has been processed using the scBERT/preprocess.py script.
+  * preprocess.py requires panglao_1000.h5ad, a subsampled version of the panglao dataset on which scBERT was pre-trained, also available in [data/](data).
+* The full panglao dataset used for pretraining is too large to host on GitHub, but can be downloaded as per the [instructions](https://github.com/TencentAILabHealthcare/scBERT#data) from the scBERT authors.
+
+### scGPT datasets
+As provided by the scGPT authors:
+- Multiple Sclerosis (M.S.) dataset: [link](https://drive.google.com/drive/folders/1Qd42YNabzyr2pWt9xoY4cVMTAxsNBt4v?usp=sharing)
+
+- Myeloid (Mye.) dataset: [link](https://drive.google.com/drive/folders/1VbpApQufZq8efFGakW3y8QDDpY9MBoDS?usp=drive_link)
+
+- hPancreas dataset: [link](https://drive.google.com/drive/folders/1s9XjcSiPC-FYV3VeHrEa7SeZetrthQVV?usp=drive_link)
